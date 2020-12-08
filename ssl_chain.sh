@@ -8,7 +8,7 @@ if [[ ! -f "${chain_pem}" ]]; then
 fi
 
 if ! openssl x509 -in "${chain_pem}" -noout 2>/dev/null ; then
-    echo "${chain_pem} is not a certificate" >&2
+    echo "${chain_pem} is not a valid X509 certificate" >&2
     exit 1
 fi
 
